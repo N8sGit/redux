@@ -1,11 +1,11 @@
 import React from 'react'
 import store from '../store'
-import { setLyrics, fetchLyrics} from '../components/Lyrics'
-import {Lyrics} from '../action-creators/lyrics'
+import Lyrics from '../components/Lyrics'
+import {setLyrics,fetchLyrics} from '../action-creators/lyrics'
 import axios from 'axios'
 
 
-export default class LyricssContainer extends React.Component {
+export default class LyricsContainer extends React.Component {
   constructor(){
     super()
     // this.state = { ...store.getState(), artistQuery: '', songQuery: ''}
