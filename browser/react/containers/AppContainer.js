@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { hashHistory } from 'react-router';
-
+import{ START_PLAYING, STOP_PLAYING, SET_CURRENT_SONG, SET_LIST} from '../constants.js'
 import initialState from '../initialState';
 import AUDIO from '../audio';
 
@@ -57,12 +57,15 @@ export default class AppContainer extends Component {
 
   play () {
     AUDIO.play();
-    this.setState({ isPlaying: true });
+
+    store.dispatch(START_PLAYING)
+
+    // this.setState({ isPlaying: true });
   }
 
   pause () {
     AUDIO.pause();
-    this.setState({ isPlaying: false });
+    store.dispatch(STOP_PLAYING)
   }
 
   load (currentSong, currentSongList) {

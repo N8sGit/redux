@@ -1,4 +1,5 @@
 import {SET_LYRICS} from '../constants';
+import axios from 'axios'
 
  const setLyrics = function(str){
   return {
@@ -16,8 +17,7 @@ import {SET_LYRICS} from '../constants';
   };
 };
 
-export default {
+export  {
     setLyrics,
     fetchLyrics
   }
-

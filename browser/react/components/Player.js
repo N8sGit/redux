@@ -10,6 +10,9 @@ const Player = (props) => {
   const toggle = props.toggle;
   const next = props.next;
 
+
+
+
   return (
     <footer>
       <div style={!currentSong.id ? {display: 'none'} : null}>

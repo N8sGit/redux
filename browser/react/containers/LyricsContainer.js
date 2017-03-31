@@ -4,6 +4,8 @@ import Lyrics from '../components/Lyrics'
 import {setLyrics,fetchLyrics} from '../action-creators/lyrics'
 import axios from 'axios'
 
+console.log(fetchLyrics, 'fetchLyrics');
+console.log(setLyrics, 'setLyrics');
 
 export default class LyricsContainer extends React.Component {
   constructor(){
@@ -16,7 +18,9 @@ export default class LyricsContainer extends React.Component {
 
     this.setArtist = this.setArtist.bind(this)
     this.setSong = this.setSong.bind(this)
+
     this.handleSubmit = this.handleSubmit.bind(this)
+    
   }
 
 
@@ -60,7 +64,7 @@ export default class LyricsContainer extends React.Component {
   render(){
     return (
       <Lyrics
-        text={this.state.text}
+        text={this.state.lyrics.text}
         artistQuery={this.state.artistQuery}
         songQuery={this.state.songQuery}
         setArtist={this.setArtist}
