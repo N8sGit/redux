@@ -5,7 +5,7 @@ module.exports = router;
 
 router.get('/:artist/:song', (req, res, next) => {
     getLyrics(req.params.artist, req.params.song, (err, r) => {
-        if (err) return next(err);
+        if (err) {return next(err);}
         res.send({ lyric: r });
     });
 });
